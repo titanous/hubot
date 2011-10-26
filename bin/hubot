@@ -54,7 +54,7 @@ Parser.on "version", (opt, value) ->
 
 Parser.parse process.ARGV
 
-process.on 'SIGTERM', -> process.exit(0)
+process.on 'SIGINT', -> process.exit(0)
 
 if Options.create
   creator = new Creator.Creator(Options.path)
